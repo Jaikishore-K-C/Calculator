@@ -1,0 +1,116 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container for heading and calculator */
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Calculator heading */
+.calculator-heading {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2.5em;
+  color: #333;
+}
+
+/* Calculator container */
+.calculator {
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  max-width: 100%;
+}
+
+/* Display styling */
+.display {
+  background: #444;
+  color: #fff;
+  font-size: 2em;
+  padding: 20px;
+  text-align: right;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow-x: auto;
+}
+
+/* Buttons grid layout */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #444;
+}
+
+/* Button styling */
+.btn {
+  background: #fff;
+  border: none;
+  padding: 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #eaeaea;
+}
+
+.btn:active {
+  background: #d4d4d4;
+}
+
+/* Styling for operator buttons */
+.btn[data-value="+"],
+.btn[data-value="-"],
+.btn[data-value="*"],
+.btn[data-value="/"] {
+  background: #f0ad4e;
+  color: #fff;
+}
+
+.btn[data-value="+"]:hover,
+.btn[data-value="-"]:hover,
+.btn[data-value="*"]:hover,
+.btn[data-value="/"]:hover {
+  background: #ec971f;
+}
+
+/* Equals button styling */
+.equals {
+  background: #5cb85c;
+  color: #fff;
+}
+
+.equals:hover {
+  background: #4cae4c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  .display {
+    font-size: 1.5em;
+    padding: 15px;
+  }
+
+  .btn {
+    padding: 15px;
+    font-size: 1em;
+  }
+}
