@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Evaluate the current expression and update the display
   function calculateResult() {
     try {
-      // Check for division by zero (ignores decimals like 0.5)
+      // Check for division by zero (ignoring decimals like 0.5)
       if (/\/0(?!\.)/.test(currentInput)) {
         updateDisplay("Error");
         currentInput = "";

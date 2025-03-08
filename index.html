@@ -8,35 +8,44 @@
 </head>
 <body>
   <div class="calculator-container">
-    <!-- Heading added above the calculator screen -->
+    <!-- Heading above the calculator -->
     <h1 class="calculator-heading">CALCULATOR</h1>
     <div class="calculator">
       <!-- Display screen -->
       <div class="display" id="display">0</div>
-      <!-- Calculator buttons arranged in a grid -->
+      <!-- Buttons grid -->
       <div class="buttons">
+        <!-- Row 1 -->
         <button class="btn" data-value="C">C</button>
         <button class="btn" data-value="/">÷</button>
         <button class="btn" data-value="*">×</button>
         <button class="btn" data-value="-">−</button>
         
+        <!-- Row 2 -->
         <button class="btn" data-value="7">7</button>
         <button class="btn" data-value="8">8</button>
         <button class="btn" data-value="9">9</button>
         <button class="btn" data-value="+">+</button>
         
+        <!-- Row 3 -->
         <button class="btn" data-value="4">4</button>
         <button class="btn" data-value="5">5</button>
         <button class="btn" data-value="6">6</button>
         <button class="btn equals" data-value="=">=</button>
         
+        <!-- Row 4 -->
         <button class="btn" data-value="1">1</button>
         <button class="btn" data-value="2">2</button>
         <button class="btn" data-value="3">3</button>
-        <!-- Zero spans two columns -->
-        <button class="btn" data-value="0" style="grid-column: span 2;">0</button>
+        <!-- Invisible placeholder to complete the row -->
+        <div class="placeholder"></div>
         
+        <!-- Row 5 -->
+        <!-- "0" spans two columns -->
+        <button class="btn zero" data-value="0" style="grid-column: span 2;">0</button>
         <button class="btn" data-value=".">.</button>
+        <!-- Invisible placeholder to complete the row -->
+        <div class="placeholder"></div>
       </div>
     </div>
   </div>
