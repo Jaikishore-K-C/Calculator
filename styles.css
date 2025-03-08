@@ -63,7 +63,7 @@ body {
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.9px;
+  gap: 0.8px;
   background: #444;
   grid-auto-rows: 60px;
 }
