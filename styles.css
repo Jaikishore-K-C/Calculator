@@ -14,7 +14,7 @@ body {
   height: 100vh;
 }
 
-/* Container for heading and calculator with vertical spacing */
+/* Container for heading and calculator */
 .calculator-container {
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@ body {
   color: #333;
 }
 
-/* Calculator container */
+/* Calculator box */
 .calculator {
   background: #222;
   border-radius: 10px;
@@ -54,7 +54,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 0.9px;
   background: #444;
-  grid-auto-rows: 60px; /* Fixed height for each row */
+  grid-auto-rows: 60px;
 }
 
 /* Button styling using flexbox for centering */
@@ -77,11 +77,13 @@ body {
   background: #d4d4d4;
 }
 
-/* Operator buttons */
+/* Operator buttons including parenthesis and percentage */
 .btn[data-value="+"],
 .btn[data-value="-"],
 .btn[data-value="*"],
-.btn[data-value="/"] {
+.btn[data-value="/"],
+.btn[data-value="paren"],
+.btn[data-value="%"] {
   background: #f0ad4e;
   color: #fff;
 }
@@ -89,11 +91,18 @@ body {
 .btn[data-value="+"]:hover,
 .btn[data-value="-"]:hover,
 .btn[data-value="*"]:hover,
-.btn[data-value="/"]:hover {
+.btn[data-value="/"]:hover,
+.btn[data-value="paren"]:hover,
+.btn[data-value="%"]:hover {
   background: #ec971f;
 }
 
-/* Equals button */
+/* Special styling for the "C" button: text color red */
+.btn[data-value="C"] {
+  color: red;
+}
+
+/* Equals button styling */
 .equals {
   background: #5cb85c;
   color: #fff;
@@ -101,12 +110,6 @@ body {
 
 .equals:hover {
   background: #4cae4c;
-}
-
-/* Invisible placeholder styling */
-.placeholder {
-  background: transparent;
-  pointer-events: none;
 }
 
 /* Responsive adjustments */
