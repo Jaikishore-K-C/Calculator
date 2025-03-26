@@ -7,7 +7,6 @@
 
 /* Gradient background on body */
 body {
-  /* A colorful linear gradient background */
   background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
@@ -18,14 +17,12 @@ body {
   height: 100vh;
 }
 
-/* Animation for background gradient */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Container for heading and calculator */
 .calculator-container {
   display: flex;
   flex-direction: column;
@@ -33,14 +30,12 @@ body {
   gap: 20px;
 }
 
-/* Calculator heading */
 .calculator-heading {
   text-align: center;
   font-size: 2.5em;
   color: #333;
 }
 
-/* Calculator box */
 .calculator {
   background: #222;
   border-radius: 10px;
@@ -50,7 +45,6 @@ body {
   overflow: hidden;
 }
 
-/* Display styling */
 .display {
   background: #444;
   color: #fff;
@@ -59,7 +53,6 @@ body {
   text-align: right;
 }
 
-/* Buttons grid layout */
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -68,7 +61,6 @@ body {
   grid-auto-rows: 60px;
 }
 
-/* Button styling using flexbox for centering */
 .btn {
   background: #fff;
   border: none;
@@ -88,13 +80,11 @@ body {
   background: #d4d4d4;
 }
 
-/* Operator buttons including parenthesis and percentage */
 .btn[data-value="+"],
 .btn[data-value="-"],
 .btn[data-value="*"],
 .btn[data-value="/"],
-.btn[data-value="paren"],
-.btn[data-value="%"] {
+.btn[data-value="paren"] {
   background: #f0ad4e;
   color: #fff;
 }
@@ -103,17 +93,15 @@ body {
 .btn[data-value="-"]:hover,
 .btn[data-value="*"]:hover,
 .btn[data-value="/"]:hover,
-.btn[data-value="paren"]:hover,
-.btn[data-value="%"]:hover {
+.btn[data-value="paren"]:hover {
   background: #ec971f;
 }
 
-/* Special styling for the "C" button: text color red */
+.btn[data-value="AC"],
 .btn[data-value="C"] {
-  color: red;
+  color: red; /* Apply the same color for the "C" button */
 }
 
-/* Equals button styling */
 .equals {
   background: #5cb85c;
   color: #fff;
@@ -123,7 +111,6 @@ body {
   background: #4cae4c;
 }
 
-/* Responsive adjustments */
 @media (max-width: 400px) {
   .display {
     font-size: 1.5em;
