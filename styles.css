@@ -1,11 +1,9 @@
-/* Reset and global styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Gradient background on body */
 body {
   background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
   background-size: 400% 400%;
